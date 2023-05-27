@@ -250,27 +250,26 @@
   
     <script>
  
-    const a=document.querySelectorAll('ul li a');
+    // const a=document.querySelectorAll('ul li a');
 
-    for(let i=0;i<a.length;i++){
-      a[i].addEventListener('click',(e)=>{
-        e.preventDefault();
+    // for(let i=0;i<a.length;i++){
+    //   a[i].addEventListener('click',(e)=>{
+    //     e.preventDefault();
           
+    //     const id= a[i].getAttribute('href');
+    //     const p = document.querySelector(id);
 
-        const id= a[i].getAttribute('href');
-        const p = document.querySelector(id);
-
-        const intervalID = setInterval(()=>{
-          const c=p.getBoundingClientRect();
-            console.log(c.top);
-          if(c.top<=0){
-            clearInterval(intervalID);
-            return;
-          }
-          window.scrollBy(0,40);
-        },50);
-      })
-    }
+    //     const intervalID = setInterval(()=>{
+    //       const c=p.getBoundingClientRect();
+    //         console.log(c.top);
+    //       if(c.top<=10){
+    //         clearInterval(intervalID);
+    //         return;
+    //       }
+    //       window.scrollBy(0,40);
+    //     },50);
+    //   })
+    // }
     </script>
   </body>
 </html>

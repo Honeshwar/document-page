@@ -195,15 +195,8 @@ table {
   font: size 1.2rem;
   margin-top: 30px;
   color: white;
-  width: 80%;
+  width: 100%;
 }
-tbody td {
-  border: solid gray;
-  background-color: rgb(234, 237, 240);
-  color: rgb(6, 47, 82);
-  padding: 10px 100px;
-}
-
 thead td {
   background-color: rgb(6, 47, 82);
   color: rgb(240, 240, 240);
@@ -211,11 +204,34 @@ thead td {
   text-align: center;
   font-size: 1.2rem;
 }
+tbody tr:nth-child(even) {
+  border: solid gray;
+  background-color: rgb(234, 237, 240);
+  color: rgb(6, 47, 82);
+  
+}
+tbody tr:nth-child(odd) {
+  border: solid gray;
+  background-color: rgb(194, 197, 199);
+  color: rgb(6, 47, 82);
+  
+}
+tbody td{
+  font-family: monospace;
+  font-size: 1.2em;
+  padding: 10px 40px;
+  width:200px;
+  height:50px;
+  text-align: center;
+}
 
 /* reference */
 #reference ul {
   margin-top: 20px;
   margin-left: 80px;
+}
+#reference{
+padding-bottom: 100px;
 }
 
 
