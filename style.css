@@ -13,24 +13,21 @@
   --paragraph-margin-left: 20px;
   --paragraph-font: serif;
   --pre-background-color: rgb(6, 47, 82);
-  /* aliceblue; */
   --pre-text-color: greenyellow;
 }
 body {
   background-color: rgb(251, 249, 249);
   display: flex;
 }
+
+/* aside section */
+
 aside {
   position:fixed;
   width: 20%;
   height: 90vh;
   border: solid;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center; */
   text-align: center;
-  /* padding: 10px; */
   margin-top: 30px;
   margin-left: 10px;
 
@@ -51,7 +48,6 @@ aside ul {
   list-style: none;
   width: 100%;
   height: 80%;
-  /* border: 2px solid; */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -60,11 +56,6 @@ aside ul {
 aside ul li {
   width: 100%;
   height: 70px;
-  /* 
-  border-top: 1px solid;
-  padding-top: 20px;
-  padding-left: 20px;
-  cursor: pointer; */
 }
 .nav-items {
   display: block;
@@ -80,27 +71,19 @@ aside ul li {
 }
 aside ul li:hover {
   border-top: 5px solid rgb(58, 64, 72);
-  /* border-bottom: 5px solid rgb(0, 70, 160); */
   background-color: rgba(255, 255, 0, 0.719);
 }
+
+
+/* main content */
 main {
   width: 80%;
   height: 100vh;
-  /* border: solid red; */
-  /* overflow-y: auto; */
   margin-left:25%;
 }
 
-/* #introduction,#html-editors,#html-elements,#html-attributes,#html-heading,#html-paragraph,#html-style,#html-formatting ,#reference  {
-  width: 100%;
-  height: auto;
- 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 10px 0 0 50px;
-  
-} */
+/* all section style */
+
 section {
   margin-bottom: 70px;
    width: 100%;
@@ -113,9 +96,6 @@ section {
 }
 section h1 {
   font-size: 2rem;
-  /* position: sticky;
-  top: 0px;
-  border-radius: 10px; */
 }
 section h1::before {
   content: " * ";
@@ -127,16 +107,12 @@ section h1::before {
 
 section:target h1 {
   background-color: yellow;
-  /* color: white; */
 }
-
-
 
 article {
   margin-left: 20px;
   width: 80%;
   height:auto;
-  /* border: solid; */
 }
 h3 {
   margin: 20px 20px;
@@ -146,9 +122,8 @@ pre {
   margin: 30px 20px;
   padding-right: 80px;
   width: 100%;
-  /* width: 60vw; */
-  background-color: var(--pre-background-color);
-  color: var(--pre-text-color);
+  background-color: var(--pre-background-color,rgb(6, 47, 82));
+  color: var(--pre-text-color,greenyellow);
   border-radius: 10px;
 
 
@@ -162,7 +137,6 @@ pre {
   word-break: normal;
   word-wrap: normal;
   line-height: 1;
-  /* background-color: #f7f7f7; */
   padding: 15px;
   margin: 10px;
   border-radius: 5px;
@@ -187,19 +161,7 @@ p {
 #introduction pre{
   width:100%;
 }
-/* #introduction h1 {
-  font-size: 2rem;
-} */
 
-/* #introduction p {
-  margin-left: var(--paragraph-margin-left, 20px);
-  width: var(--paragraph-width, 80%);
-  font-family: var(--paragraph-font, serif);
-  color: var(--paragraph-color, gray);
-  font-size: var(--paragraph-font-size, 17px);
-  line-height: var(--paragraph-line-height, 30px);
-  text-align: var(--paragraph-justify, justify);
-} */
 /* html editors */
 
 #html-editors p {
@@ -220,30 +182,20 @@ p {
   margin-left: 70px;
   width: 40%;
   height: 150px;
-  /* border: solid; */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   font-size: 17px;
   color: rgb(82, 82, 82);
-  /* margin-left: -300px; */
 }
-
-
-/* #html-elements pre {
-  height: 50px;
-} */
-
 
 /* table */
 
 table {
   font: size 1.2rem;
   margin-top: 30px;
-  /* background-color: rgb(8, 57, 105); */
   color: white;
   width: 80%;
-  /* border-spacing: 10px; */
 }
 tbody td {
   border: solid gray;
@@ -255,17 +207,21 @@ tbody td {
 thead td {
   background-color: rgb(6, 47, 82);
   color: rgb(240, 240, 240);
-  /* border: solid; */
   padding: 10px;
   text-align: center;
   font-size: 1.2rem;
 }
+
 /* reference */
 #reference ul {
   margin-top: 20px;
   margin-left: 80px;
-  /* width: 150px; */
 }
+
+
+
+/* Media queries  */
+
 @media only screen and (max-width: 900px) {
   body {
     flex-direction: column;
@@ -275,16 +231,13 @@ thead td {
     width: 99%;
     margin: auto;
     height: auto;
-    /* height: 200px; */
     box-shadow: none;
     border: none;
-
     margin-bottom: 40px;
   }
 
   aside ul {
     height: 400px;
-
     overflow-y: scroll;
     border:2px solid rgb(255, 255, 255);
     border-radius:10px;
@@ -311,14 +264,11 @@ thead td {
     margin: auto;
     height: 200px;
     flex-flow: row wrap;
-    /* width: 99%;
-    margin: auto; */
     height: auto;
-    /* height: 200px; */
     box-shadow: none;
     border: none;
-
     margin-bottom: 40px;
+
   }
    
   main {
@@ -327,20 +277,4 @@ thead td {
     height: auto;
   }
 
-  pre {
-    overflow-x: auto;
-    
-
-    display: block;
-    text-align: left;
-    white-space: pre-line;
-    position: relative;
-    word-break: normal;
-    word-wrap: normal;
-    /* line-height: 2; */
-    /* background-color: #f7f7f7; */
-    padding: 15px;
-    margin: 10px;
-    border-radius: 5px;
-  }
 }
